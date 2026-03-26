@@ -11,6 +11,10 @@ Version stable avec :
 - timing AllSteps rétabli
 - Patch 1 : chargement modules + compatibilité
 - Patch 2 : assets locaux + fallbacks natifs
+- Patch 3 robot help text
+- Patch 4 harmonisation visuelle légère des bulles locales
+sans toucher au runtime
+- Patch 5 adaptation plus profonde du contenu pédagogique aux rocks, buttons, goop, bucket, etc.
 
 ## Limitations
 - pas de backend `reference.php`
