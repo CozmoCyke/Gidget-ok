@@ -1,0 +1,68 @@
+Synthèse
+
+La couche d’aide locale est déjà solide sur les verbes robot centraux.
+Le reste du manque est surtout de la profondeur pédagogique sur des mots génériques, pas des trous sur les actions principales.
+Fichiers audités
+
+ok/lib/refguide/object-help.js
+ok/lib/refguide/refguide.js
+ok/lib/ideagarden/ideagarden-suggestion-assertion.html
+ok/lib/ideagarden/ideagarden-suggestion-repeat.html
+ok/lib/ideagarden/ideagarden-suggestion-condition.html
+ok/lib/ideagarden/ideagarden-suggestion-if.html
+ok/lib/ideagarden/ideagarden-suggestion-list.html
+ok/lib/ideagarden/ideagarden-suggestion-variable.html
+ok/lib/ideagarden/ideagarden-suggestion-iteratorvariable.html
+ok/lib/ideagarden/ideagarden-suggestion-object.html
+ok/lib/ideagarden/ideagarden-suggestion-function.html
+ok/lib/ideagarden/ideagarden-suggestion-when.html
+Pour l’inventaire gameplay: ok/index.html, ok/intro.js, ok/levels_parserError.js
+1. Inventaire
+
+Objets de gameplay importants: gidget, rock, goop, bucket, button, crack, rat
+Verbes / actions importants: scan, analyze, goto, grab, drop, ask, avoid
+Mots-clés de contrôle importants: if, when, for, in, function, list, variable, iteratorvariable, condition, assertion
+Aides IdeaGarden disponibles: assertion, repeat, condition, if, list, variable, iteratorvariable, object, function, when
+2. Couverture
+
+Bonne couverture:
+scan, analyze, goto, grab, drop, ask, avoid, if
+for, in, function, when
+rock, goop, bucket, button, crack, rat
+repeat via l’aide IdeaGarden + le support de boucle dans refguide.js
+Couverture partielle:
+assertion, condition, list, variable, iteratorvariable, object
+gidget reste utile mais assez générique
+ensure, create, done, else, energy, name, position, property, return, right, set, literal, image, plural, singleton, stack, sound, this, to, is, are, and, or, not
+Couverte mais trop générique:
+surtout les mots de référence / structure: create, done, ensure, name, position, property, return, right, set, energy, literal, image, stack, sound, singleton, plural
+côté IdeaGarden, assertion, list, iteratorvariable peuvent encore parler un peu trop “concept” et pas assez “niveau”
+Non couverte:
+je ne vois pas de trou critique sur les verbes ou objets robots centraux
+les vrais manques restants sont surtout des aides secondaires très génériques, ou du contenu legacy hors couche robots
+3. Top priorités à améliorer ensuite
+
+ensure - mot de contrôle important, mais encore trop abstrait pour un débutant
+set - très fréquent pour l’état et les variables, il gagnerait à parler d’exemples robots concrets
+property - central pour analyze et les tests, mais encore trop dictionnaire
+position - utile pour la navigation, manque d’exemple de déplacement réel
+return - clé pour les fonctions, souvent source de confusion
+name - très fréquent dans les erreurs de ciblage et de boucle
+create - utile pour les définitions, mais encore trop générique
+energy - visible en jeu, donc une aide plus orientée “échec de niveau” serait utile
+right - trop vague pour un mot qui peut parler de direction ou d’alignement
+done - bon candidat pour une formulation plus “objectif atteint / état final”
+4. Micro-patch
+
+Aucun micro-patch proposé.
+Je n’ai pas vu de correction textuelle évidente, très petite et suffisamment justifiée pour être faite “au passage”.
+5. Confirmation
+
+Aucun changement de logique.
+Aucun changement du runtime.
+Aucun changement du scheduler.
+Aucun changement de ui.js.
+Aucun fichier n’a été modifié pendant cet audit.
+Si tu veux, je peux transformer cet audit en patch 8 ultra-ciblé uniquement sur les 3 ou 4 priorités les plus rentables pédagogiquement.
+
+
