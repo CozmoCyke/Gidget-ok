@@ -32,6 +32,54 @@ body {
 	margin:			0em;
 }
 
+.cursor-dictionary,
+.cursor-ideagarden {
+	cursor: help;
+}
+
+.local-help-tooltip {
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	max-width: 34em;
+	padding: 0.85em 1em;
+	border: 1px solid #6d6d6d;
+	border-radius: 6px;
+	background: #f8f7ef;
+	color: #1b1b1b;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.35;
+}
+
+.local-help-tooltip .local-help-title {
+	display: block;
+	margin-bottom: 0.45em;
+	font-weight: bold;
+	font-size: 1.05em;
+}
+
+.local-help-tooltip .local-help-body p {
+	margin: 0 0 0.55em 0;
+}
+
+.local-help-tooltip .local-help-body p:last-child {
+	margin-bottom: 0;
+}
+
+.local-help-tooltip .ideagarden-tooltip-suggestion {
+	line-height: 1.35;
+}
+
+.local-help-tooltip .ideagarden-heading {
+	display: block;
+	margin-bottom: 0.45em;
+}
+
+.local-help-tooltip .sourceLine {
+	white-space: normal;
+}
+
 p {
 	color: 			white;
 	font-family:	Arial, Helvetica, sans-serif;
